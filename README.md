@@ -8,8 +8,8 @@ Pxel-x is a web application built using React.js, Material-UI, and Firebase. It 
 - **Like List:** Users can see who has liked their images.
 - **Responsive Design:** The website is designed to work seamlessly across various devices.
 
-## Installation
+## 📦Installation
 ### . Clone the repository:
     ```bash
     git clone https://github.com/Tariq-Monowar/pxel-x.git
-    ```
+
