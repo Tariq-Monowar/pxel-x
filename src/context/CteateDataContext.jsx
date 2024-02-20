@@ -121,10 +121,9 @@ export const CreateDataContextProvider = ({ children }) => {
       uploadTask.on(
         "state_changed",
         (snapshot) => {
-          // You can use the snapshot to get the progress
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          progressCallback(progress); // Call the progress callback function
+          progressCallback(progress); 
         },
         (error) => {
           console.error("Error during upload:", error.message);
@@ -154,7 +153,6 @@ export const CreateDataContextProvider = ({ children }) => {
         }
       );
 
-      // Check if uploadeStope is true before starting the upload
       if (uploadeStope) {
         console.log("Upload canceled before starting.");
         uploadTask.cancel(); // Cancel the upload task
@@ -186,7 +184,6 @@ export const CreateDataContextProvider = ({ children }) => {
             userSnapshot.forEach((userDoc) => {
               const userData = { id: userDoc.id, ...userDoc.data() };
               // console.log(userData);
-              // Assuming you want to associate user data with the corresponding image
               imageData.userData = userData;
             });
           } else {
@@ -391,7 +388,7 @@ export const CreateDataContextProvider = ({ children }) => {
         if (previmg) {
           try {
             const prevImageRef = ref(storage, previmg);
-            await getMetadata(prevImageRef); // Check if the object exists
+            await getMetadata(prevImageRef); 
             await deleteObject(prevImageRef);
           } catch (error) {
             console.error("Error deleting previous image:", error.message);
@@ -517,22 +514,22 @@ export const CreateDataContextProvider = ({ children }) => {
     try {
       const imageDocRef = doc(firestore, "image", id);
 
-      // Fetch the current document data
+      // get current document data
       const imageDocSnapshot = await getDoc(imageDocRef);
       const imageData = imageDocSnapshot.data();
 
-      // Check if the user's UID is already in the likedBy array
+      // Check user uid is already in the likedBy array
       const likedByArray = imageData.likedBy || [];
 
-      // Remove null values from the likedByArray
+      // Remove null values form likedByArray
       const cleanLikedByArray = likedByArray.filter((uid) => uid !== null);
 
       if (increment) {
-        // Increment the like count
+        // Increment ike
         const updatedLikedByArray = [...cleanLikedByArray, userUid];
         await updateDoc(imageDocRef, { likedBy: updatedLikedByArray });
       } else {
-        // Decrement the like count
+        // Decrement like
         const updatedLikedByArray = cleanLikedByArray.filter(
           (uid) => uid !== userUid
         );
@@ -559,16 +556,13 @@ export const CreateDataContextProvider = ({ children }) => {
           userInfoList.push(userData);
         } else {
           console.warn(`User data not found for uid: ${uid}`);
-          // You can handle the case where user data is not found for a specific UID
-          // For example, you can push a default user object or null to the userInfoList
-          // userInfoList.push({ id: null, uid });
         }
       }
       console.log(userInfoList);
       return userInfoList;
     } catch (error) {
       console.error("Error fetching user info:", error.message);
-      throw error; // You can handle the error based on your application's requirements
+      throw error; 
     }
   };
 
@@ -587,9 +581,6 @@ export const CreateDataContextProvider = ({ children }) => {
           userInfoList.push(userData);
         } else {
           console.warn(`User data not found for uid: ${uid}`);
-          // You can handle the case where user data is not found for a specific UID
-          // For example, you can push a default user object or null to the userInfoList
-          // userInfoList.push({ id: null, uid });
         }
       }
   
@@ -597,7 +588,7 @@ export const CreateDataContextProvider = ({ children }) => {
       return userInfoList;
     } catch (error) {
       console.error("Error fetching user info:", error.message);
-      throw error; // You can handle the error based on your application's requirements
+      throw error; 
     }
   };
   
