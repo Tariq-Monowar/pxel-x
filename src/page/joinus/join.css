@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap");
+
+.join {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 2;
+  background: url(https://images.pexels.com/photos/1454794/pexels-photo-1454794.jpeg);
+  background-size: cover;
+}
+
+.joinusform {
+  margin: 0px 85px 0px 60px;
+}
+.swiper {
+  width: 270px;
+  height: 380px;
+
+  animation: 0.5s ease-in 0s 1 joinswiperAnimation;
+}
+@keyframes joinswiperAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: #294c41;
+  padding: 10px;
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: #294c41;
+  padding: 10px;
+}
+#submitBtn {
+  font-family: "Merienda", cursive;
+}
+
+.othersign {
+  max-width: 450px;
+  font-family: "Merienda", cursive;
+  margin: 0px 0px 0px 30px;
+}
+.signuptetx {
+  animation: 0.5s ease-in 0s 1 signuptetx-opacity-animation;
+}
+.logintetx {
+  animation: 0.5s ease-in 0s 1 logintetx-opacity-animation;
+}
+@keyframes signuptetx-opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes logintetx-opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* form section */
+.swiper-wrapper {
+  height: 400px;
+}
+
+.fromTitle {
+  color: #f1fffa;
+  text-align: center;
+  font-family: "Merienda", cursive;
+  font-size: 25px;
+  margin: 20px 0px 5px 0px;
+}
+.emailField {
+  color: #fff;
+}
+#standard-adornment-password {
+  font-size: 18px;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+#inputLabelId {
+  font-family: "Merienda", cursive;
+  margin-left: 1px;
+}
+
+.css-1thsyux-MuiInputBase-root-MuiInput-root:hover:not(
+    .Mui-disabled .Muie-rror
+  ):before {
+  border-bottom: 2px solid #63a38df0;
+}
+
+.or {
+  text-align: center;
+  font-family: "Merienda", cursive;
+  font-size: 23px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+.otherLogin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.oricon {
+  background-color: #203f35;
+  color: #daebe5;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 24px;
+}
+.oricon:active {
+  transform: scale(0.9);
+}
+.oricon:hover {
+  transition: 0.2s;
+  background: #1a342b;
+}
+
+.errorMeeage {
+  font-family: "Merienda", cursive;
+  font-size: 16px;
+  text-align: left;
+  margin: 15px 0px 0px 12px;
+  color: #ffd2d2;
+  animation: 0.2s ease-in 0s 1 hideErrorAnimation;
+}
+@keyframes hideErrorAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.errorMeeageLogin {
+  font-family: "Merienda", cursive;
+  font-size: 15px;
+  text-align: left;
+  margin: 7px 0px -17px 12px;
+  color: #ffd2d2;
+  animation: 0.2s ease-in 0s 1 hideErrorAnimation;
+}
+
+@media only screen and (max-width: 880px) {
+  .joinusform {
+    margin: 0px 70px 0px 80px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .signuptetx {
+    display: none;
+  }
+  .logintetx {
+    display: none;
+  }
+}

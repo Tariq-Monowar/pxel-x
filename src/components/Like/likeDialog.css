@@ -1,0 +1,38 @@
+.likeContaner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 17px;
+}
+.likeContaner .avatorLike img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #52afa2c4;
+}
+.likeContaner p {
+  font-family: "Merienda", cursive;
+  margin-left: 12px;
+  /* margin-top: 10px; */
+  margin-bottom: 4px;
+}
+.titleDeleteDialogLike {
+  font-family: "Merienda", cursive !important;
+  font-size: 24px !important;
+}
+.closeIconLike {
+  margin-left: 40px;
+  margin-top: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+    .titleDeleteDialogLike{
+        font-size: 19px !important;
+    }
+    .closeIconLike{
+        margin-left: 20px;
+    }
+    .closeIconLike{
+        margin-top: 0px;
+    }
+    
+}

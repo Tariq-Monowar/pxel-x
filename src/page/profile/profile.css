@@ -1,0 +1,130 @@
+.ProfileContainer{
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 30px;
+    margin: 0px auto;
+    text-align: center;
+}
+.profilePicture{
+    width: 130px;
+    min-width: 130px;
+    max-width: 130px;
+    height: 130px;
+    min-height: 130px;
+    max-height: 130px;
+    margin: 0px auto;
+}
+.imageurl{
+    width: 100%;
+    height: 100%;
+}
+.imageAvatar{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #52afa2c4;
+}
+.withoutImageurl{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #dddddd;
+    border: 3px solid #52afa2c4;
+}
+.withoutImageurl span{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #7e7e7e;
+    user-select: none;
+}
+.UpDateImage{
+    margin-top: -23px;
+    margin-right: -85px;
+}
+.updateIcon{
+  font-size: 22px;
+  color: #2f2f2f;
+  margin-top: 6px;
+}.updateIcon:hover{
+    color: #1d1d1d;
+}.updateIcon:active{
+    opacity: .5;
+}
+.displayName{
+    margin-top: 15px;
+    font-family: 'Merienda', cursive;
+}
+#customized-dialog-title{
+    font-family: 'Merienda', cursive;
+}
+.userupdateSection{
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    text-align: center;
+}
+.upDateIconImage{
+
+}
+.icon{
+    height: 130px;
+    width: 130px;
+    color: #636363;
+    opacity: .7;
+}.icon:hover{
+    transition: .2s;
+    color: #525252;
+}.icon:active{
+    transition: .1s;
+    transform: scale(0.95);
+    opacity: .5;
+}
+.userNameInput{
+    font-size: 25px;
+    font-family: 'Merienda', cursive; 
+    border: none;
+    border-bottom: 1px solid #8d8d8d;
+    width: 100%;
+    min-width: 250px;
+    text-align: center;
+    margin-top: 10px;
+}.userNameInput:focus{
+    outline: none;
+}
+
+.userImages{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    border: 3px solid #52afa2c4;
+}
+.userImg span{
+    font-size: 20px;
+    position: fixed;
+    /* margin-right: -150px; */
+    z-index: 1;
+}.userImg span:hover{
+    transition: .2;
+    transform: scale(1.1);
+}
+.logout-btn{
+    background: #294c41;
+    width: 200px;
+    border: none;
+    font-size: 17px;
+    font-family: 'Merienda', cursive; 
+    color: #fff;
+    border-radius: 10px;
+    padding: 2px 0px 3px 0px;
+    margin-top: 10px;
+}.logout-btn:hover{
+    transition: .2s;
+    background: #23443a;
+}.logout-btn:active{
+    transition: .1s;
+    transform: scale(0.95);
+    opacity: .7;
+}

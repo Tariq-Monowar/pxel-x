@@ -1,0 +1,28 @@
+.setInnerImage {
+  animation: 0.3s ease-in 0s 1 setAnimation2;
+}
+@keyframes setAnimation2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .seletedImages{
+    width: 100%!important;
+  }
+  .setInnerImages {
+    width: 100%!important;
+  }
+  .uploadeImageTexts{
+    width: 92%!important;
+    font-size: 17px!important;
+  }
+  .uploadeImageButtons{
+    width: 100%!important;
+    margin-bottom: 10px!important;
+  }
+}

@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+
+.navbar {
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  backdrop-filter: blur(15px);
+  z-index: 2;
+}
+.navbarHome{
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  backdrop-filter: blur(15px); */
+  z-index: 2;
+}
+.logo p {
+  /* font-family: 'Noto Serif', serif; */
+  font-size: 33px;
+  /* font-family: 'Merienda', cursive; */
+  font-family: "Dancing Script", cursive;
+  margin-left: 20px;
+  white-space: nowrap;
+}
+.navelement {
+  margin-right: 34px;
+  display: flex;
+  align-items: center;
+}
+.element {
+  color: rgb(54, 54, 54);
+  text-decoration: none;
+  font-size: 18px;
+  /* font-family: 'Merienda', cursive; */
+  font-family: "Noto Serif", serif;
+  margin: 0px 20px;
+}
+.active {
+  color: #000;
+}
+.isImage{
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 6px;
+  margin-left: -10px;
+  line-height: 1;
+}
+.userPhoto {
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* border-radius: 50%; */
+}
+.isImage:hover {
+  opacity: 0.9;
+}.isImage:active{
+    transition: .2s;
+    transform: scale(0.9);
+}
+
+.isNotimage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+    margin-left: -10px;
+    background: #dddddd;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+}.isNotimage:hover {
+    opacity: 0.9;
+  }.isNotimage:active{
+      transition: .2s;
+      transform: scale(0.9);
+  }
+.isNotimage span{
+    text-transform: uppercase;
+    font-family: "Noto Serif", serif;
+}
+
+/* https://fonts.google.com/noto/specimen/Noto+Serif */
+/* https://fonts.google.com/noto/specimen/Noto+Serif */
+/* https://fonts.google.com/specimen/Alkatra */
+/* https://fonts.google.com/specimen/Courgette */
+/* https://fonts.google.com/specimen/Crimson+Pro */
+/* https://fonts.google.com/specimen/Merienda */
+
+@media only screen and (max-width: 650px) {
+  .logo p {
+    font-size: 28px;
+  }
+  .element {
+    font-size: 18px;
+  }
+  .navelement {
+    margin-right: 20px
+  }
+  .isImage{
+    margin-right: -22px;
+  }
+  .s1telement{
+    margin-right: -4px;
+    
+  }
+  .s2telement{
+    margin-right: 4px;
+  }
+  .isNotimage{
+    margin-right: -22px;
+    margin-left: -8px;
+  }
+}
