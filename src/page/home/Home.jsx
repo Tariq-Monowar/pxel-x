@@ -152,14 +152,42 @@ const Home = () => {
   }, []);
 
 
-const searchImage = (e) => {
-  let input = e.target.value;
-  const results = allImage.filter((item) => {
-    const words = item.name.toLowerCase().split(' ');
-    return words.some((word) => word.startsWith(input.toLowerCase()));
-  });
-  setFilterImage(results);
-};
+// const searchImage = (e) => {
+//   let input = e.target.value;
+//   const results = allImage.filter((item) => {
+//     const words = item.name.toLowerCase().split(' ');
+//     return words.some((word) => word.startsWith(input.toLowerCase()));
+//   });
+//   setFilterImage(results);
+// };
+
+    const searchImage = (e) => {
+    let input = e.target.value.replace(/[^a-zA-Z]/g, '');
+  
+    // Check if input is null or empty
+    if (!input) {
+      setFilterImage(allImage);
+      return;
+    }
+  
+    const results = allImage.filter((item) => {
+      const words = item.name.toLowerCase().split(' ');
+  
+      // Count the number of matching characters
+      const matchCount = words.reduce((count, word) => {
+        const inputLength = Math.min(input.length, word.length);
+        const matchingChars = [...input.slice(0, inputLength)].filter((char, index) => char === word[index]).length;
+        return count + matchingChars;
+      }, 0);
+  
+      // Check if the match percentage is at least 50%
+      const matchPercentage = (matchCount / input.length) * 100;
+      return matchPercentage >= 50;
+    });
+  
+    setFilterImage(results);
+  };
+  
 
   return (
     <div style={{}}>
