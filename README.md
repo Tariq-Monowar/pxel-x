@@ -13,3 +13,5 @@ Pxel-x is a web application built using React.js, Material-UI, and Firebase. It 
 - Clone the repository:
    ```bash
    git clone https://github.com/Tariq-Monowar/pxel-x.git
+
+
